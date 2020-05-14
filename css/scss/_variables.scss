@@ -1,12 +1,49 @@
 //#####     COLORS
 //PRIMARY
-$tomato: #FE4040;
-$sea: #8CADA6;
-$dark-grey: #1C1C1C;
+$joycon-red: #ff4554;
+$joycon-blue: #00c3e3;
+$joycon-grey: #989898;
+$joycon-btn-grey: #414548;
+
+$black: #1b1b1b;
 $white: #ffffff;
-//SECONDARY
-$faded-red: #D88D8D;
-$faded-red-dark: #C57B7B;
-$mid-grey: #616161;
-$light-grey: #EBEBED;
-$dark-sea: #68857F;
+
+
+//########      FONTS
+$defaultFont: "Sarabun",
+Arial,
+Helvetica,
+Sans-serif;
+
+//#########     SPACING
+$extra-small-space: 10px;
+$small-space: 20px;
+$mid-space: 30px;
+$large-space: 50px;
+$extra-large-space: 100px;
+
+
+
+
+//###########       RESPONSIVE
+// RESPONSIVE TAGS MIXINS
+@mixin for-phone-only {
+    @media (max-width: 530px) {
+        @content;
+    }
+}
+
+
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: 700px) {
+        @content;
+    }
+}
+
+
+@mixin touch-device {
+    @media (hover: none) {
+        @content;
+    }
+}
