@@ -1,0 +1,88 @@
+*:not(.custom-font) {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+*::selection {
+    background-color: $sea;
+}
+
+h1 {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    font-size: 74px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $dark-grey;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: $mid-grey;
+}
+
+p {
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    letter-spacing: 0.05em;
+    color: $mid-grey;
+    &strong {
+        font-weight: 600;
+    }
+}
+
+a {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: $mid-grey;
+    &:hover {
+        text-decoration: underline;
+        color: $sea;
+    }
+    &:active {
+        text-decoration: underline;
+        color: #68857F;
+    }
+    &:visited {
+        color: #68857F;
+    }
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    margin: 0 0 10px 0;
+    color: $dark-grey;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: $mid-grey;
+}
+
+button,
+input[type="button"],
+.btn {
+    text-align: center;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: $white;
+    background: $tomato;
+}

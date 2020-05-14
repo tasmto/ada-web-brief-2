@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:not(.custom-font) {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+*::-moz-selection {
+  background-color: #8CADA6;
+}
+
+*::selection {
+  background-color: #8CADA6;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1C1C1C;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #616161;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #616161;
+}
+
+pstrong {
+  font-weight: 600;
+}
+
+a {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #616161;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #8CADA6;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #68857F;
+}
+
+a:visited {
+  color: #68857F;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  margin: 0 0 10px 0;
+  color: #1C1C1C;
+  text-transform: uppercase;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #616161;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #616161;
+}
+
+input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #616161;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #616161;
+}
+
+button,
+input[type="button"],
+.btn {
+  text-align: center;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #ffffff;
+  background: #FE4040;
+}
+
+body {
+  background: #EBEBED;
+  background: url("../images/a-picture-of-a-temple-in-japan.jpg") center no-repeat;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  max-width: 940px;
+  width: 100%;
+  margin: auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.one-half {
+  width: 50%;
+}
+
+.vert-center {
+  margin: auto;
+}
+
+nav {
+  padding: 35px 0;
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  padding: 0 20px;
+}
+
+nav ul::after {
+  content: "";
+  clear: both;
+  float: none;
+  display: block;
+}
+
+main::after {
+  content: "";
+  clear: both;
+  float: none;
+  display: block;
+}
+
+main section:nth-child(1) {
+  width: 40%;
+  margin-right: 10%;
+}
+
+main section:nth-child(2) {
+  margin: 14% 0;
+}
+
+.raffle-form {
+  padding: 60px;
+  background: #ffffff;
+}
+
+.raffle-form fieldset input {
+  width: 100%;
+}
+
+.raffle-form fieldset:not(:first-child) label {
+  margin-top: 30px;
+}
+
+.raffle-form input[type="button"] {
+  margin-top: 50px;
+}
+
+footer {
+  padding: 35px 0;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li a {
+  padding: 0 20px;
+}
+
+footer .footer-social-icon-container a:hover .svg-icon-container svg {
+  -webkit-box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.18);
+          box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.18);
+}
+
+footer .footer-social-icon-container a:hover .svg-icon-container svg * {
+  fill: #FE4040;
+}
+
+footer .footer-social-icon-container a svg * {
+  fill: #ffffff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+}
+
+input {
+  padding: 10px;
+  background: #ffffff;
+  border: 0.5px solid #878787;
+  border-radius: 8px;
+}
+
+input:focus {
+  border: 0.5px solid #8CADA6;
+}
+
+button,
+input[type="button"],
+.btn {
+  border: 0;
+  background: #FE4040;
+  padding: 10px 25px;
+}
+
+button:hover,
+input[type="button"]:hover,
+.btn:hover {
+  background: #D88D8D;
+  cursor: pointer;
+}
+
+button:active,
+input[type="button"]:active,
+.btn:active {
+  background: #C57B7B;
+}
+
+button:disabled,
+input[type="button"]:disabled,
+.btn:disabled {
+  background: #EBEBED;
+  color: #1C1C1C;
+}
+/*# sourceMappingURL=style.css.map */

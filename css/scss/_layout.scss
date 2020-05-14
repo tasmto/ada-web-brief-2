@@ -1,0 +1,112 @@
+body {
+    background: $light-grey;
+    background: url("../images/a-picture-of-a-temple-in-japan.jpg") center no-repeat;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    max-width: 940px;
+    width: 100%;
+    margin: auto;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.vert-center {
+    margin: auto;
+}
+
+nav {
+    padding: 35px 0;
+    ul {
+        float: right;
+        list-style: none;
+        li {
+            display: inline;
+            a {
+                padding: 0 20px;
+            }
+        }
+        &::after {
+            content: "";
+            clear: both;
+            float: none;
+            display: block;
+        }
+    }
+}
+
+main {
+    &::after {
+        content: "";
+        clear: both;
+        float: none;
+        display: block;
+    }
+    section:nth-child(1) {
+        width: 40%;
+        margin-right: 10%;
+    }
+    section:nth-child(2) {
+        margin: 14% 0;
+    }
+}
+
+.raffle-form {
+    padding: 60px;
+    background: $white;
+    fieldset {
+        input {
+            width: 100%;
+        }
+        &:not(:first-child) {
+            label {
+                margin-top: 30px;
+            }
+        }
+    }
+    input[type="button"] {
+        margin-top: 50px;
+    }
+}
+
+footer {
+    padding: 35px 0;
+    ul {
+        list-style: none;
+        li {
+            display: inline;
+            a {
+                padding: 0 20px;
+            }
+        }
+    }
+    .footer-social-icon-container {
+        a {
+            &:hover {
+                .svg-icon-container {
+                    svg {
+                        box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.18);
+                        * {
+                            fill: $tomato;
+                        }
+                    }
+                }
+            }
+            svg * {
+                fill: $white;
+            }
+        }
+    }
+}

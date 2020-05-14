@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+label {
+    display: block;
+}
+
+input {
+    padding: 10px;
+    background: $white;
+    border: 0.5px solid #878787;
+    border-radius: 8px;
+    &:focus {
+        border: 0.5px solid $sea;
+    }
+}
+
+button,
+input[type="button"],
+.btn {
+    border: 0;
+    background: $tomato;
+    padding: 10px 25px;
+    &:hover {
+        background: $faded-red;
+        cursor: pointer;
+    }
+    &:active {
+        background: $faded-red-dark;
+    }
+    &:disabled {
+        background: $light-grey;
+        color: $dark-grey;
+    }
+}
