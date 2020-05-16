@@ -1,0 +1,231 @@
+.event-slider-container--outer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: $extra-small-space 0;
+
+    .event-slider-content-container {
+        height: 500px;
+        height: 100%;
+        min-height: 350px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+
+
+        .event-slide {
+            max-width: 50%;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            transform: scaleY(0.95);
+            color: $white;
+            background-color: $joycon-red;
+            transition: transform 200ms ease;
+
+            &.event-slide-active {
+                transition: transform 400ms ease;
+                transform: scaleY(1);
+
+                .content-container {
+                    opacity: 1;
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: $joycon-blue;
+            }
+
+            .content-container {
+                padding: 20% $large-space;
+                transition: opacity 150ms ease-in-out;
+                opacity: 0.5;
+            }
+
+            &:hover,
+            .active {
+                .content-container {
+                    transition-duration: 250ms;
+                    transition-delay: 200ms;
+                    opacity: 1;
+                    cursor: grabbing;
+
+
+                }
+
+                &:not(.event-slide-active) {
+                    cursor: pointer;
+                }
+            }
+
+
+
+
+        }
+    }
+}
+
+
+.expand-content {
+    overflow: hidden;
+    opacity: 0;
+    height: auto;
+    max-height: 0;
+    transition: 300ms ease opacity, 200ms max-height ease;
+
+    &.open {
+        max-height: 300px;
+        opacity: 1;
+        transition: 450ms ease opacity, 300ms max-height ease;
+    }
+}
+
+hr {
+    margin-top: $large-space;
+    margin-bottom: $mid-space;
+    color: transparent;
+    height: 3px;
+    background: url('../icons/border-bottom-line.svg') no-repeat left;
+}
+
+
+
+.schedule-page {
+    .schedule-container {
+
+        h1 {
+            @include h2 ();
+            text-align: center;
+            padding-top: $large-space;
+        }
+
+        .schedule-component--outer {
+            background: $black;
+            padding: 0 $extra-large-space;
+
+            .schedule-tab-title--container--outer {
+                justify-content: space-between;
+               
+
+                span {
+                    margin: auto 0;
+                    a{
+                        text-decoration: none;
+                    }
+                }
+
+                .schedule-tab-title--container {
+                    flex-flow: row wrap;
+
+
+                    .tab {
+                        margin: 0 $small-space;
+                        padding: $small-space $extra-small-space $extra-small-space;
+                        background: transparent;
+                        color: $white;
+                        text-align: center;
+
+                        &:nth-child(1) {
+                            margin-left: 0;
+                        }
+                        &:nth-last-child() {
+                            margin-right: 0;
+                        }
+
+                        &:hover,
+                        &:active,
+                        &[aria-expanded="true"] {
+                            background: $white;
+                            color: $black;
+                            cursor: pointer;
+
+                            h3 {
+                                color: $black;
+                            }
+                        }
+
+                        h3 {
+                            @include p1();
+                            font-weight: bold;
+                            color: $white;
+                        }
+                    }
+
+                }
+            }
+
+            .schedule-content--container{
+                overflow-y: auto;
+                height: 400px;
+                margin: $large-space 0;
+                height: 60vh;
+                opacity: 0;
+                display: none;
+                visibility: hidden;
+                transition: opacity 200ms ease;
+                .row{
+                    display: flex;
+                    justify-content: space-between;
+                    color: $white;
+                    border-bottom: 1px solid rgba(124, 124, 124, 0.3);
+                    padding:  $small-space 0; 
+                    
+                    &:nth-child(1) {
+                        padding: 0 0 $small-space  0;
+                    }
+                    &:nth-last-child() {
+                        padding: $small-space 0 0 0;
+                        border-bottom: 0; 
+                    }
+
+                    :nth-child(1) {
+                        align-items: center;
+                        margin-right: $extra-small-space;
+                        img{
+                            margin-right: $small-space;
+                        }
+                        h3{
+                            @include p1 ();
+                            font-weight: bold;
+                            color: $white;
+                            text-transform: uppercase;
+                        }
+
+                        p{
+                            @include p3 ();
+                            color: $white;
+                        }
+                    }
+
+                    :nth-child(2) {
+                        margin-right: $extra-small-space;
+                        p{
+                            @include p3();
+                            color: $white;
+                            &:nth-child(1) {
+                                font-weight: bold;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    :nth-child(3) {
+                        a{
+                            @include link ();
+                        }
+                    }
+                }
+
+                &[aria-expanded="true"] {
+                    opacity: 1;
+                    display: block;
+                    visibility: visible;
+                }
+
+            }
+        }
+    }
+}

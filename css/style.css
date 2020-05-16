@@ -1,51 +1,176 @@
-* {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
 }
 
 *::-moz-selection {
   background-color: #ff4554;
+  color: #ffffff;
+  text-decoration-color: #ffffff;
 }
 
 *::selection {
   background-color: #ff4554;
+  color: #ffffff;
+  -webkit-text-decoration-color: #ffffff;
+          text-decoration-color: #ffffff;
 }
 
-a {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 130%;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  color: #1b1b1b;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #1b1b1b;
-}
-
-a:active {
-  text-decoration: underline;
-  color: #68857F;
-}
-
-a:visited {
-  color: #68857F;
+a.white-link {
+  color: #ffffff;
 }
 
 label {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 130%;
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
   letter-spacing: 0.05em;
   margin: 0 0 10px 0;
   color: #1b1b1b;
   text-transform: uppercase;
+}
+
+label strong,
+label b {
+  font-weight: 800;
 }
 
 input::-webkit-input-placeholder {
@@ -83,19 +208,510 @@ input::placeholder {
 button,
 input[type="button"],
 .btn {
-  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+}
+
+button strong,
+button b,
+input[type="button"] strong,
+input[type="button"] b,
+.btn strong,
+.btn b {
+  font-weight: 800;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+button,
+input[type="button"],
+.btn {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  font-weight: bold;
+  width: 100%;
+  color: #ffffff !important;
+  background: #1b1b1b;
+  padding: 10px 30px;
+}
+
+button strong,
+button b,
+input[type="button"] strong,
+input[type="button"] b,
+.btn strong,
+.btn b {
+  font-weight: 800;
+}
+
+button:hover,
+input[type="button"]:hover,
+.btn:hover {
+  cursor: pointer;
+  background: #ffffff;
+  color: #1b1b1b !important;
+}
+
+.ticket-btn {
+  padding: 10px 20px;
+  position: relative;
+  background: #1b1b1b;
+}
+
+.ticket-btn::before, .ticket-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 100%;
+}
+
+.ticket-btn::before {
+  left: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+  background-position: center;
+}
+
+.ticket-btn::after {
+  right: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+  background-position: center;
+}
+
+.ticket-btn:hover::before, .ticket-btn:active::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+}
+
+.ticket-btn:hover::after, .ticket-btn:active::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+}
+
+.btn-inverted {
+  background: #ffffff;
+  color: #1b1b1b !important;
+}
+
+.btn-inverted::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+}
+
+.btn-inverted::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+}
+
+.btn-inverted:hover, .btn-inverted:active {
+  background: #00c3e3;
+  color: #ffffff !important;
+}
+
+.btn-inverted:hover::before, .btn-inverted:active::before {
+  left: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%2300C3E3'/%3E%3C/svg%3E%0A");
+  background-position: center;
+}
+
+.btn-inverted:hover::after, .btn-inverted:active::after {
+  right: -10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%2300C3E3'/%3E%3C/svg%3E%0A");
+  background-position: center;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: 0;
+}
+
+label {
+  display: block;
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+label strong,
+label b {
+  font-weight: 800;
+}
+
+input {
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: 2px solid #ffffff;
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
   font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+}
+
+input strong,
+input b {
+  font-weight: 800;
+}
+
+input:active, input:focus {
+  border: 2px solid #00c3e3;
+}
+
+.event-slider-container--outer {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.event-slider-container--outer .event-slider-content-container {
+  height: 500px;
+  height: 100%;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide {
+  max-width: 50%;
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-transform: scaleY(0.95);
+          transform: scaleY(0.95);
+  color: #ffffff;
+  background-color: #ff4554;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide.event-slide-active {
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide.event-slide-active .content-container {
+  opacity: 1;
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide:nth-child(even) {
+  background-color: #00c3e3;
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide .content-container {
+  padding: 20% 50px;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  opacity: 0.5;
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide:hover .content-container,
+.event-slider-container--outer .event-slider-content-container .event-slide .active .content-container {
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+  opacity: 1;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.event-slider-container--outer .event-slider-content-container .event-slide:hover:not(.event-slide-active),
+.event-slider-container--outer .event-slider-content-container .event-slide .active:not(.event-slide-active) {
+  cursor: pointer;
+}
+
+.expand-content {
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  max-height: 0;
+  -webkit-transition: 300ms ease opacity, 200ms max-height ease;
+  transition: 300ms ease opacity, 200ms max-height ease;
+}
+
+.expand-content.open {
+  max-height: 300px;
+  opacity: 1;
+  -webkit-transition: 450ms ease opacity, 300ms max-height ease;
+  transition: 450ms ease opacity, 300ms max-height ease;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: transparent;
+  height: 3px;
+  background: url("../icons/border-bottom-line.svg") no-repeat left;
+}
+
+.schedule-page .schedule-container h1 {
+  font-family: "Poppins", Arial, Helvetica, Sans-serif;
+  margin: 0 0 30px 0;
+  font-weight: 600;
+  font-size: 28px;
   line-height: 130%;
   letter-spacing: 0.05em;
-  font-weight: 600;
   color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.schedule-page .schedule-container .schedule-component--outer {
   background: #1b1b1b;
+  padding: 0 100px;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer span {
+  margin: auto 0;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer span a {
+  text-decoration: none;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab {
+  margin: 0 20px;
+  padding: 20px 10px 10px;
+  background: transparent;
+  color: #ffffff;
+  text-align: center;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab:nth-child(1) {
+  margin-left: 0;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab:nth-last-child() {
+  margin-right: 0;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab:hover, .schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab:active, .schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab[aria-expanded="true"] {
+  background: #ffffff;
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab:hover h3, .schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab:active h3, .schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab[aria-expanded="true"] h3 {
+  color: #1b1b1b;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab h3 {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab h3 strong,
+.schedule-page .schedule-container .schedule-component--outer .schedule-tab-title--container--outer .schedule-tab-title--container .tab h3 b {
+  font-weight: 800;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container {
+  overflow-y: auto;
+  height: 400px;
+  margin: 50px 0;
+  height: 60vh;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(124, 124, 124, 0.3);
+  padding: 20px 0;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row:nth-child(1) {
+  padding: 0 0 20px 0;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row:nth-last-child() {
+  padding: 20px 0 0 0;
+  border-bottom: 0;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) img {
+  margin-right: 20px;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) h3 {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) h3 strong,
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) h3 b {
+  font-weight: 800;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) p {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  color: #ffffff;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) p strong,
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(1) p b {
+  font-weight: 800;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(2) {
+  margin-right: 10px;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(2) p {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  color: #ffffff;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(2) p strong,
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(2) p b {
+  font-weight: 800;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(2) p:nth-child(1) {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(3) a {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  margin: 0;
+  color: #00c3e3;
+  text-decoration: underline;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(3) a:hover {
+  color: #129FB7;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(3) a:active, .schedule-page .schedule-container .schedule-component--outer .schedule-content--container .row :nth-child(3) a:visited {
+  color: #129FB7;
+}
+
+.schedule-page .schedule-container .schedule-component--outer .schedule-content--container[aria-expanded="true"] {
+  opacity: 1;
+  display: block;
+  visibility: visible;
 }
 
 #root {
   min-height: 100vh;
   max-width: 100vw;
+}
+
+#root,
+main {
   width: 100%;
+  overflow: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .wrap {
@@ -111,75 +727,229 @@ input[type="button"],
   }
 }
 
-nav {
-  padding: 35px 0;
+.flex-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-nav ul {
-  float: right;
-  list-style: none;
+.homepage,
+.schedule-page {
+  min-height: 100vh;
 }
 
-nav ul li {
+.homepage-event-slider-section {
+  color: white;
+}
+
+.homepage-event-slider-section h2 {
+  font-family: "Poppins", Arial, Helvetica, Sans-serif;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  color: #ffffff;
+}
+
+.homepage-event-slider-section p {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  color: #ffffff;
+}
+
+.homepage-event-slider-section p strong,
+.homepage-event-slider-section p b {
+  font-weight: 800;
+}
+
+.homepage-event-slider-section .button-container {
+  margin-bottom: 30px;
+}
+
+.homepage-event-slider-section .button-container a {
+  text-decoration: none;
+}
+
+.homepage-event-slider-section .white-link {
+  margin-top: 20px;
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  margin: 0;
+  color: #00c3e3;
+  text-decoration: underline;
+  color: #ffffff !important;
+}
+
+.homepage-event-slider-section .white-link:hover {
+  color: #129FB7;
+}
+
+.homepage-event-slider-section .white-link:active, .homepage-event-slider-section .white-link:visited {
+  color: #129FB7;
+}
+
+.event-slider-content-container article:nth-child(1) {
+  background: url("../images/week-1-san-antonio-event-banner.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.event-slider-content-container article:nth-child(2) {
+  background: url("../images/week-2-austin-event-banner.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.event-slider-content-container article:nth-child(2) .expand-content {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.contact-page-section {
+  height: 100%;
+  padding: 50px;
+}
+
+.contact-page-section.week-1 {
+  background: #ff4554;
+  background: url("../../images/week-1-event-contact-banner.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.contact-page-section.week-2 {
+  background: #ff4554;
+  background: url("../../images/week-2-event-contact-banner.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.contact-page-section div {
+  min-height: 400px;
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-page-section div h2 {
+  font-family: "Poppins", Arial, Helvetica, Sans-serif;
+  margin: 0 0 30px 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contact-page-section div form {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-page-section div form fieldset {
+  width: 100%;
+}
+
+.contact-page-section div form button {
+  display: inline-block;
+  border: 0;
+}
+
+.schedule-page .schedule-container {
+  max-height: 100vh;
+}
+
+.schedule-page .schedule-container.week-1 {
+  background: #ff4554;
+  background: url("../../images/week-1-event-schedule-banner.jpg") no-repeat top;
+}
+
+.schedule-page .schedule-container.week-2 {
+  background: #00c3e3;
+  background: url("../../images/week-2-event-schedule-banner.jpg") no-repeat top;
+}
+
+header {
+  top: 0;
+  padding: 30px 0 50px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #ffffff;
+  width: 100%;
+  height: 45px;
+}
+
+header nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
+}
+
+header nav ul li {
   display: inline;
 }
 
-nav ul li a {
+header nav ul li a {
+  font-family: "Roboto", Arial, Helvetica, Sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.05em;
+  color: #1b1b1b;
+  margin: 0;
+  color: #00c3e3;
+  text-decoration: underline;
   padding: 0 20px;
+  text-decoration: none;
+  color: #1b1b1b;
 }
 
-nav ul::after {
-  content: "";
-  clear: both;
-  float: none;
-  display: block;
+header nav ul li a:hover {
+  color: #129FB7;
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
+header nav ul li a:active, header nav ul li a:visited {
+  color: #129FB7;
 }
 
-label {
-  display: block;
-}
-
-input {
-  padding: 10px;
-  background: #ffffff;
-  border: 0.5px solid #878787;
-  border-radius: 8px;
-}
-
-input:focus {
-  border: 0.5px solid #00c3e3;
-}
-
-button,
-input[type="button"],
-.btn {
-  border: 0;
-  background: #ff4554;
-  padding: 10px 25px;
-}
-
-button:hover,
-input[type="button"]:hover,
-.btn:hover {
-  background: #00c3e3;
-  cursor: pointer;
-}
-
-button:active,
-input[type="button"]:active,
-.btn:active {
-  background: #414548;
-}
-
-button:disabled,
-input[type="button"]:disabled,
-.btn:disabled {
-  background: #989898;
-  color: #414548;
+main {
+  margin-top: 95px;
 }
 /*# sourceMappingURL=style.css.map */

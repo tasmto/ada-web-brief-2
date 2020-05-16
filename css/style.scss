@@ -4,7 +4,12 @@
 @import 'scss/variables';
 // ALL THE TEXT STYLES
 @import 'scss/type';
+// THE STYLES FOR BUTTONS AND FORMS
+@import 'scss/inputs';
+//STYLES FOR COMPONENTS
+@import 'scss/components';
 // THE LAYOUT STYLES (MEDIA QUERIES LIVE HERE)
 @import 'scss/layout';
-// THE STYLES FOR BUTTONS AND FORMS
-@import 'scss/inputs'
+
+//STYLES FOR THE NAVIGATION
+@import 'scss/nav';

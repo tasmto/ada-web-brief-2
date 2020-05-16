@@ -1,0 +1,34 @@
+header {
+  top: 0;
+  padding: $mid-space 0 $large-space;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $white;
+  width: 100%;
+  height: 45px;
+
+  nav {
+    justify-content: space-between;
+    flex-flow: wrap row;
+
+    ul {
+      li {
+        display: inline;
+
+        a {
+          @include link ();
+          padding: 0 20px;
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+//MOVE DOWN THE MAIN
+main {
+  margin-top: 45 + 50px;
+}

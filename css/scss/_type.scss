@@ -1,23 +1,28 @@
 * {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: $Font2;
+    ;
 }
 
 *::selection {
     background-color: $joycon-red;
+    color: $white;
+    text-decoration-color: $white;
 }
 
-@mixin  h1 () {
+@mixin h1 () {
+    font-family: $Font1;
     margin: 0 0 $small-space 0;
     font-weight: 700;
-    font-size: 42;
+    font-size: 42px;
     line-height: 130%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: $white;
 }
 
-@mixin  h2 () {
-    margin: 0 0 $extra-small-space 0;
+@mixin h2 () {
+    font-family: $Font1;
+    margin: 0 0 $mid-space 0;
     font-weight: 600;
     font-size: 28px;
     line-height: 130%;
@@ -26,56 +31,80 @@
     text-transform: uppercase;
 }
 
-@mixin  p1 () {
+@mixin p1 () {
+    font-family: $Font2;
+    margin: 0 0 $extra-small-space 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 125%;
+    letter-spacing: 0.05em;
+    color: $black;
+
+    strong,
+    b {
+        font-weight: 800;
+    }
+}
+
+@mixin p2 () {
+    font-family: $Font2;
+    margin: 0 0 $extra-small-space 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.05em;
+    color: $black;
+
+    strong,
+    b {
+        font-weight: 800;
+    }
+}
+
+
+@mixin p3 () {
+    font-family: $Font2;
     margin: 0 0 $extra-small-space 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 125%;
     letter-spacing: 0.05em;
     color: $black;
-    &strong {
-        font-weight: 600;
+
+    strong,
+    b {
+        font-weight: 800;
     }
 }
 
 
-@mixin  p2 () {
-    margin: 0 0 $extra-small-space 0;
+@mixin link () {
+    font-family: $Font2;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 125%;
     letter-spacing: 0.05em;
     color: $black;
-    &strong {
-        font-weight: 600;
+    margin: 0;
+    color: $joycon-blue;
+    text-decoration: underline;
+
+    &:hover {
+        color: #129FB7;
+    }
+
+    &:active,
+    &:visited {
+        color: #129FB7;
     }
 }
 
-
-a {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 130%;
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    color: $black;
-    &:hover {
-        text-decoration: underline;
-        color: $black;
-    }
-    &:active {
-        text-decoration: underline;
-        color: #68857F;
-    }
-    &:visited {
-        color: #68857F;
-    }
+a.white-link {
+    color: $white;
 }
 
 label {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 130%;
+    @include p1();
     letter-spacing: 0.05em;
     margin: 0 0 10px 0;
     color: $black;
@@ -93,11 +122,9 @@ input::placeholder {
 button,
 input[type="button"],
 .btn {
-    text-align: center;
-    font-size: 14px;
-    line-height: 130%;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-    color: $white;
-    background: $black;
+    @include p2();
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

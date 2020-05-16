@@ -1,3 +1,7 @@
 (function() {
-    document.querySelector('#name-txt').focus();
+   const focusOn = document.querySelector('.setFocusOnLoad');
+    if (focusOn) {
+        focusOn.focus();
+    }
 }())
+

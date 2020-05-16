@@ -1,37 +1,109 @@
-fieldset {
-    border: 0;
-    padding: 0;
-}
-
-label {
-    display: block;
-}
-
-input {
-    padding: 10px;
-    background: $white;
-    border: 0.5px solid #878787;
-    border-radius: 8px;
-    &:focus {
-        border: 0.5px solid $joycon-blue;
-    }
-}
-
 button,
 input[type="button"],
 .btn {
-    border: 0;
-    background: $joycon-red;
-    padding: 10px 25px;
-    &:hover {
-        background: $joycon-blue;
+    @include p2();
+    font-weight: bold;
+    width: 100%;
+    color: $white !important;
+    background: $black;
+    padding:  $extra-small-space $mid-space;
+    &:hover{
         cursor: pointer;
+        background: $white;
+        color: $black !important;
     }
-    &:active {
-        background: $joycon-btn-grey;
+}
+
+.ticket-btn {
+    padding:  $extra-small-space $small-space;
+    position: relative;
+    background: $black;
+    &::before, &::after {
+        content:  "";
+        position: absolute;
+        top: 0;
+        width: 15px;
+        height: 100%;
     }
-    &:disabled {
-        background:$joycon-grey;
-        color: $joycon-btn-grey;
+
+
+    &::before{
+        left: -10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+        background-position: center;
+    }
+
+    &::after{
+        right: -10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%231B1B1B'/%3E%3C/svg%3E%0A");
+        background-position: center;
+    }
+
+    &:hover, &:active{
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+        }
+    
+        &::after{
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+}
+
+.btn-inverted {
+    background: $white;
+    color: $black !important;
+
+    &::before{
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    }
+
+    &::after{
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    }
+
+    &:hover, &:active{
+        background: $joycon-blue;
+        color: $white !important;
+        &::before{
+            left: -10px;
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0V13H8V23H0V35H15V0Z' fill='%2300C3E3'/%3E%3C/svg%3E%0A");
+            background-position: center;
+        }
+    
+        &::after{
+            right: -10px;
+            background-image: url("data:image/svg+xml,%3Csvg width='15' height='35' viewBox='0 0 15 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H15V13H7V23H15V35H0V0Z' fill='%2300C3E3'/%3E%3C/svg%3E%0A");
+            background-position: center;
+        }
+    }
+
+
+}
+
+
+fieldset {
+    margin-bottom: $mid-space;
+    border: 0
+}
+
+label{
+    display: block;
+    @include p1();
+    color: $white;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    padding:  $extra-small-space $mid-space;
+    border-radius: 30px;
+    border: 2px solid $white;
+    @include p3();
+
+    &:active, &:focus {
+        border: 2px solid $joycon-blue;
     }
 }

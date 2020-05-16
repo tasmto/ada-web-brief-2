@@ -9,14 +9,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Switch Festa 2020</title>
+    <title>Switch Festa 2020 - RSVP</title>
     <meta
       name="description"
       content="RSVP for your spot on the Switch Festa 2020 Convetion!"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 
     <link rel="stylesheet" href="css/style.css" />
@@ -88,46 +91,29 @@
           </ul>
         </nav>
       </header>
-      <main class="homepage">
+      <main>
 
-        <section class="homepage-event-slider-section wrap">
-          <div class="event-slider-container--outer">
-            <div class="event-slider-content-container">
-          <article class="event-slide event-slide-active">
-              <div class="content-container">
-                <h2>26-31 JULY 2020</h2>
-                <div class="expand-content open">
-                <p><b>Week 1</b></br>San Antonio, Texas</p>
-                <hr class="decorative-half-spacer">
-              </div>
-              <p class="button-container"><a href="/week-1-contact.html" class="btn ticket-btn">RSVP</a></p>
-                <p class="expand-content open"><a href="/week-1-schedule.html" class="white-link">*See Event Schedule</a></p>
-              </div>
-          </article>
+        <section class="contact-page-section week-2">
+          <div class="wrap">
+            <h2>RESERVE YOUR SEAT!</h2>
+            <form action="mail.php" method="POST">
+              <fieldset>
+                <label for="txt-name">HIYA, MY NAME IS:</label>
+                <input required type="text"  class="setFocusOnLoad" id="txt-name" placeholder="Patty Paterson">
+              </fieldset>
+              <fieldset>
+                <label for="txt-email">AND YOU CAN EMAIL ME ON:</label>
+                <input required type="email" id="txt-email" placeholder="patty.pat@example.com">
+              </fieldset>
 
-          <article class="event-slide ">
-            <div class="content-container">
-              <h2>02-06 AUG 2020</h2>
-              <div class="expand-content">
-              <p><b>Week 2</b></br>Austin, Texas</p>
-              <hr class="decorative-half-spacer">
-            </div>
-             <p class="button-container"><a href="/week-2-contact.html" class="btn ticket-btn">RSVP</a></p>
-              <p class="expand-content"><a href="/week-2-schedule.html" class="white-link">*See Event Schedule</a></p>
-            </div>
-          
-        </article>
-      </div>
-     
-
-      </div>
-        </div>
+              <button class="ticket-btn" type="submit">RSVP</button>
+            </form>
+          </div>
         </section>
 
       </main>
     </div>
 
     <script src="js/main.js" defer></script>
-    <script src="js/slider.js" defer></script>
   </body>
 </html>
